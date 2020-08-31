@@ -3,9 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Background-Video</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            /*border: 1px solid black;*/
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .content{
+            position: absolute;
+            top: 37%;
+            left: 32%;
+            /*background-color: lightcoral;*/
+            width: 500px;
+            z-index: 1;
+            height: auto;
+            padding: 10px;
+        }
+        .content h1{
+            font-family: "Bilbo Swash Caps";
+            font-weight: 600;
+            text-align: center;
+            font-size: 50px;
+            text-shadow: 5px 5px 5px rgb(112, 111, 111);
+            z-index: -1;
+        }
+        .content button{
+            text-align: center;
+            padding: 10px;
+            font-size: 25px;
+            font-family: "Bilbo Swash Caps";
+            font-weight: bolder;
+            border-radius: 5px 10px;
+            margin: 2% 30%;
+        }
+        .content button:hover{
+            cursor: pointer;
+        }
+        .video-container video{
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+
+        }
+        .color-overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: lightblue;
+            opacity: 0.3;
+
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="main">
+        <div class="content">
+            <h1>Paradise Falls, a land lost in time</h1>
+            <button>Visit With Us!</button>
+        </div>
+        <div class="video-container">
+            <div class="color-overlay"></div>
+            <video autoplay loop muted >
+            <source src="videos-images/production ID_3963239.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
 </body>
 </html>
